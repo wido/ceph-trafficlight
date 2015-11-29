@@ -1,0 +1,13 @@
+[Unit]
+Description=Ceph Trafficlight
+Documentation=https://github.com/wido/ceph-trafficlight
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/ceph-trafficlight/ceph-health.py
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
